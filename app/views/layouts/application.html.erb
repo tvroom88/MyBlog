@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyBlog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="custom.css" rel="stylesheet">
+
+
+    <style>
+
+        a {
+            text-decoration: none !important;
+            /*color: #F7F7F7;*/
+        }
+
+        a:hover {
+            color: #000000;
+        }
+
+        a.link {
+            color: #F7F7F7;
+        }
+
+        .ul-board {
+            list-style-type: none;
+        }
+
+        .li-board {
+            display: inline;
+        }
+
+        .row {
+            width: 800px;
+            display: flex;
+            flex-direction: row;
+            /*justify-content: center;*/
+            text-align: start;
+            margin: auto;
+        }
+        .block {
+            border: 1px solid black;
+        }
+
+        .users-form {
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            border: 1px solid #000000;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: start
+        }
+
+        .user-form-inner {
+            margin-left: 20px;
+            margin-right: 20px
+        }
+
+    </style>
+  </head>
+
+  <body>
+
+  <header class="p-3 bg-dark text-white">
+      <div class="container_1">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+              <use xlink:href="#bootstrap"/>
+            </svg>
+          </a>
+
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/home/index" class="nav-link px-2 text-white">Home</a></li>
+            <li><a href="/home/blog_board" class="nav-link px-2 text-white">Blog</a></li>
+          </ul>
+
+          <div class="text-end">
+            <% if user_signed_in? %>
+              <button type="button" class="btn btn-outline-light me-2">
+                <%= link_to "회원정보", edit_user_registration_path, class: "link" %>
+              </button>
+              <button type="button" class="btn btn-outline-light me-2 ">
+                <%= link_to "로그아웃", destroy_user_session_path, class: "link" %>
+              </button>
+            <% else %>
+
+              <button type="button" class="btn btn-outline-light me-2">
+                <%= link_to "로그인", user_session_path, class: "link" %>
+              </button>
+              <button type="button" class="btn btn-outline-light me-2 ">
+                <%= link_to "회원가입", "/users/sign_up", class: "link" %>
+              </button>
+
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <div style="text-align: center; margin-top: 10px;">
+    <%= yield %>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<h1> Welcome to come Jaehong's Homepage</h1>
+
+<% if user_signed_in? %>
+  <div>
+    아이디 : <%= current_user.email %><br/>
+    유저 No. : <%= current_user.id %>
+  </div>
+<% else %>
+  로그인 되어있지 않음.
+<% end %>
+
+<br/>
+<br/>
+<%= alert %>
+<%= notice %>
+
+
+
+

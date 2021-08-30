@@ -1,0 +1,17 @@
+@import "bootstrap";
+
+
+#container_1 a:hover {
+    background:#cccccc;
+    color:yellowgreen;
+}
+
+
+.container_1 a:hover {
+    background:#B00100;
+    color:yellowgreen;
+}
+
+.main {
+    text-align: center;
+}
