@@ -1,3 +1,4 @@
+<img width="413" alt="Screen Shot 2021-08-29 at 8 22 19 PM" src="https://user-images.githubusercontent.com/4710854/131284735-7c3c7611-6f6c-4683-bdf9-806b87c3eb50.png">
 MyBlog 프로젝트 :
 
 기획 의도 : 
@@ -44,5 +45,6 @@ MVC :
    blog.html (블로그 추가)
 
    (3) user 관련 view :
+<img width="413" alt="Screen Shot 2021-08-29 at 8 22 19 PM" src="https://user-images.githubusercontent.com/4710854/131284743-188e63f4-2e63-48a3-9102-150a2de1f30b.png">
 
 
